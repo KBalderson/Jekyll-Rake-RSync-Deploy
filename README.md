@@ -24,6 +24,7 @@ Usage
 =====
 
 To deploy the site, run `rake deploy`
+
 To deploy a different environment, run `rake deploy env=production`
 
 The same applies for launch:
