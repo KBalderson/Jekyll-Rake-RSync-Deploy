@@ -1,9 +1,9 @@
 Jekyll-Rake-RSync-Deploy
 ========================
 
-A rake task for RSync Deployment in Jekyll
+A rake task for RSync Deployment in [Jekyll](http://jekyllrb.com/).
 
-Set up rake tasks for Jekyll Deploy and Launch
+Creates rake tasks for Jekyll Deploy and Launch.
 
 Uses environments set up in `_config.yml` like so:
 
@@ -33,6 +33,17 @@ The same applies for launch:
     rake launch env=production
 
 This command will open the environment in your default browser
+
+Defaults
+========
+========
+
+`env=stage`
+
+Notes and Thanks
+================
+================
+================
 
 Note: Do not include a trailing slash on your destination variable in _config.yml
 
