@@ -13,6 +13,7 @@ Uses environments set up in `_config.yml` like so:
         remote:
           connection: user@example.com
           path: /var/www/
+          port: 12345 #optional
       production:
         url: http://production.example.com
         remote:
