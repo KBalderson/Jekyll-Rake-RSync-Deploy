@@ -6,7 +6,10 @@ config = YAML.load_file(config_file)
 env = ENV['env'] || 'stage'
 
 task :deploy do
-  sh "jekyll && rsync -avz --delete #{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
+  command = "jekyll && rsync -avz --delete "
+  command << "-e 'ssh -p #{config['environments'][env]['remote']['port']}' " unless config['environments'][env]['remote']['port'].nil?
+  command << "#{config['destination']}/ #{config['environments'][env]['remote']['connection']}:#{config['environments'][env]['remote']['path']}"
+  sh command
 end
 
 task :launch do
