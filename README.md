@@ -46,7 +46,7 @@ Notes and Thanks
 ================
 ================
 
-Note: Do not include a trailing slash on your destination variable in _config.yml
+Note: Requires 'destination' ([see Jekyll docs](https://github.com/mojombo/jekyll/wiki/Configuration)) to be set in _config.yml, or it will try to rsync "/". Do not include a trailing slash on the 'destination' variable.
 
 Thanks to [henrik](https://github.com/henrik) for the [rsync bash script](https://github.com/henrik/henrik.nyh.se/blob/master/tasks/deploy) that I stole to make this.
 
